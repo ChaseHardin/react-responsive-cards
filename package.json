@@ -32,6 +32,7 @@
     "@testing-library/react": "^10.4.8",
     "@testing-library/user-event": "^12.1.1",
     "babel-eslint": "^10.0.3",
+    "chance": "^1.1.6",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
