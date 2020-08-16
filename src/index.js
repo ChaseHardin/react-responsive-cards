@@ -1,18 +1,26 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Alert from 'react-bootstrap/Alert'
+import Card from './card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 
-export const ExampleComponent = ({ text }) => {
+export const Cards = (props) => {
+  const renderCards = () =>
+    props.details.map((detail, index) => (
+      <Col
+        key={index}
+        lg={4}
+        md={6}
+        style={{ marginBottom: '1rem', marginTop: '2rem' }}
+      >
+        <Card detail={detail} />
+      </Col>
+    ))
+
   return (
     <Container>
-      <Row style={{ marginTop: '2rem' }}>
-        <Col>
-          <Alert variant='info'>Example Component: {text}</Alert>
-        </Col>
-      </Row>
+      <Row>{renderCards()}</Row>
     </Container>
   )
 }
