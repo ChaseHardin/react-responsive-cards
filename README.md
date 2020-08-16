@@ -14,7 +14,6 @@ npm install --save react-responsive-cards
 ```
 
 ## Usage
-
 ```jsx
 import React from 'react'
 
@@ -46,6 +45,11 @@ const App = () => {
 
 export default App
 ```
+
+## Props
+| PropName   | isRequired  | Type      |
+| :--------- | :---------- | :-------- |
+|  details   |    yes      | Object[]  |
 
 ## License
 
