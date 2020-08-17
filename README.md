@@ -50,6 +50,7 @@ export default App
 | PropName   | isRequired  | Type      |
 | :--------- | :---------- | :-------- |
 |  details   |    yes      | Object[]  |
+|  image     |    no       | sring     |
 
 ## License
 
