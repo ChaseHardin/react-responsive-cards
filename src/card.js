@@ -9,7 +9,7 @@ export default ({ detail }) => {
         alt={makeAltText}
         variant='top'
         src={detail.image}
-        style={{ width: '100%', height: '400px', objectFit: 'cover' }}
+        style={{ width: '100%', height: '25rem', objectFit: 'cover' }}
       />
     )
 
@@ -18,7 +18,7 @@ export default ({ detail }) => {
       {renderImage()}
       <Card.Body>
         <Card.Title>{detail.title}</Card.Title>
-        <Card.Text>{detail.description}</Card.Text>
+        <Card.Text style={{height: '4rem', overflow: 'scroll' }}>{detail.description}</Card.Text>
       </Card.Body>
     </Card>
   )
