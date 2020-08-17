@@ -24,19 +24,23 @@ const App = () => {
   const details = [
     {
       title: 'Jimi Hendrix',
-      description: 'James Marshall Hendrix was an American rock guitarist, singer, and songwriter.'
+      description: 'James Marshall Hendrix was an American rock guitarist, singer, and songwriter.',
+      image: 'https://hendrix.jpg'
     },
     {
       title: 'Rolling Stones',
-      description: 'The Rolling Stones are an English rock band formed in London in 1962.'
-    },
-    {
-      title: 'Freddie King',
-      description: 'Freddie King was an American blues guitarist and singer (September 3, 1934 - December 28, 1976).'
+      description: 'The Rolling Stones are an English rock band formed in London in 1962.',
+      image: 'https://rolling-stones.png'
     },
     {
       title: 'Eric Clapton',
-      description: 'Eric Clapton, an English rock and blues guitarist born on March 30th, 1945.'
+      description: 'Eric Clapton, an English rock and blues guitarist born on March 30th, 1945.',
+      image: 'https://eric-clapton.jpg'
+    },
+    {
+      title: 'Freddie King',
+      description: 'Freddie King was an American blues guitarist and singer (September 3, 1934 - December 28, 1976).',
+      image: 'https://freddie-king.jpg'
     }
   ]
 
