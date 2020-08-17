@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 export default ({ detail }) => {
   const makeAltText = `Picture for ${detail.title}`
@@ -13,12 +14,23 @@ export default ({ detail }) => {
       />
     )
 
+  const renderButton = () => {
+    return (
+      <Button variant={detail.variant} onClick={detail.callbackFn}>
+        {detail.buttonText}
+      </Button>
+    )
+  }
+
   return (
     <Card>
       {renderImage()}
       <Card.Body>
         <Card.Title>{detail.title}</Card.Title>
-        <Card.Text style={{height: '4rem', overflow: 'scroll' }}>{detail.description}</Card.Text>
+        <Card.Text style={{ height: '4rem', overflow: 'scroll' }}>
+          {detail.description}
+        </Card.Text>
+        {detail.variant && renderButton()}
       </Card.Body>
     </Card>
   )
