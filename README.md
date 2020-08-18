@@ -25,22 +25,34 @@ const App = () => {
     {
       title: 'Jimi Hendrix',
       description: 'James Marshall Hendrix was an American rock guitarist, singer, and songwriter.',
-      image: 'https://hendrix.jpg'
+      image: 'https://hendrix.jpg',
+      variant: 'dark',
+      buttonText: 'Details',
+      callbackFn: () => setSelected('Hendrix')
     },
     {
       title: 'Rolling Stones',
       description: 'The Rolling Stones are an English rock band formed in London in 1962.',
-      image: 'https://rolling-stones.png'
+      image: 'https://rolling-stones.png',
+      variant: 'dark',
+      buttonText: 'Details',
+      callbackFn: () => setSelected('Stones')
     },
     {
       title: 'Eric Clapton',
       description: 'Eric Clapton, an English rock and blues guitarist born on March 30th, 1945.',
-      image: 'https://eric-clapton.jpg'
+      image: 'https://eric-clapton.jpg',
+      variant: 'dark',
+      buttonText: 'Details',
+      callbackFn: () => setSelected('Clapton')
     },
     {
       title: 'Freddie King',
       description: 'Freddie King was an American blues guitarist and singer (September 3, 1934 - December 28, 1976).',
-      image: 'https://freddie-king.jpg'
+      image: 'https://freddie-king.jpg',
+      variant: 'dark',
+      buttonText: 'Details',
+      callbackFn: () => setSelected('King')
     }
   ]
 
@@ -51,10 +63,13 @@ export default App
 ```
 
 ## Props
-| PropName   | isRequired  | Type      |
-| :--------- | :---------- | :-------- |
-|  details   |    yes      | Object[]  |
-|  image     |    no       | sring     |
+| PropName   | isRequired  | Type      | Description                                                         |
+| :--------- | :---------- | :-------- | --------------------------------------------------                  |
+|  details   |    yes      | Object[]  | An array of objects that build up the card details                  | 
+|  image     |    no       | sring     | Card image                                                          |
+|  variant   |    no       | string    | Used to specify button color                                        | 
+| buttonText |    no       | string    | Sets the button text                                                |
+| callbackFn |    no       | func      | Allows consumers to specify behavior when button event is triggered |
 
 ## License
 
