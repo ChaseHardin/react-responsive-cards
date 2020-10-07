@@ -2,6 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import { Cards } from './index'
 import chance from './test-utils/chance-util'
+import '@testing-library/jest-dom/extend-expect'
 
 test('should allow a user to tie callback functions to button click events', () => {
   const stubbedCallback = jest.fn()
@@ -12,7 +13,7 @@ test('should allow a user to tie callback functions to button click events', () 
       description: chance.paragraph(),
       image: chance.url(),
       callbackFn: stubbedCallback,
-      buttonText: chance.string(),
+      buttonText: 'chase',
       variant: chance.pickone([
         'primary',
         'secondary',

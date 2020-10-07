@@ -24,6 +24,10 @@ test('should allow a user to view multiple cards', () => {
     getByText(detail.title)
     getByText(detail.description)
     getByAltText(`Picture for ${detail.title}`)
+    expect(getByAltText(`Picture for ${detail.title}`)).toHaveAttribute(
+      'src',
+      detail.image
+    )
     expect(getByAltText(`Picture for ${details[0].title}`)).toHaveAttribute(
       'style',
       'width: 100%; height: 25rem; object-fit: cover;'

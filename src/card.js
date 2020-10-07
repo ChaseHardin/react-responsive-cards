@@ -3,12 +3,9 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 export default ({ detail }) => {
-  const makeAltText = `Picture for ${detail.title}`
   const renderImage = () => (
     <Card.Img
-      data-testid='chase'
-      alt={makeAltText}
-      variant='top'
+      alt={`Picture for ${detail.title}`}
       src={
         detail.image ||
         'https://via.placeholder.com/500x500.png?text=react-responsive-cards'
