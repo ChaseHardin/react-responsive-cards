@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Cards } from 'react-responsive-cards'
-import Alert from 'react-bootstrap/Alert'
 import 'react-responsive-cards/dist/index.css'
 import Chance from 'chance'
 const chance = new Chance()
