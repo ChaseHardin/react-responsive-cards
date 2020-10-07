@@ -25,9 +25,9 @@ const App = () => {
 
   const details = [
     {
-      title: 'Jimi Hendrix',
-      description: 'Jimi Hendrix was an American rock guitarist, singer, and songwriter.',
-      image: 'https://hendrix.jpg',
+      title: 'The Card Title',
+      description: 'This is a short description',
+      image: 'https://<image_here>.jpg',
       variant: 'dark',
       buttonText: 'Details',
       callbackFn: handleCallback
