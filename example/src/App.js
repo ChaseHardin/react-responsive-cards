@@ -6,38 +6,24 @@ import 'react-responsive-cards/dist/index.css'
 import Chance from 'chance'
 const chance = new Chance()
 
-const App = () => {
-  const [selected, setSelected] = React.useState('');
-  
-  const cardInfo = () => {
-    const title = chance.name();
+const generateCardDetails = chance.n(() => {
+  const title = chance.name();
 
-    return {
-      title,
-      description: chance.paragraph(),
-      variant: chance.pickone([
-        'primary',
-        'secondary',
-        'success',
-        'danger',
-        'warning',
-        'info',
-        'light',
-        'dark'
-      ]),
-      buttonText: 'Details',
-      callbackFn: () => setSelected(title)
-    }
+  return {
+    title,
+    description: chance.paragraph(),
+    variant: chance.pickone([
+      'primary',
+      'secondary',
+      'success',
+      'danger',
+      'warning',
+      'info',
+      'dark'
+    ]),
+    buttonText: 'Details',
+    callbackFn: () => alert(`Event triggered for: ${title}`)
   }
+}, 100)
 
-  const details = chance.n(cardInfo, 100)
-
-  return (
-    <React.Fragment>
-      {selected && <Alert variant={'dark'}>{selected} was selected</Alert>}
-      <Cards details={details} />
-    </React.Fragment>
-  )
-}
-
-export default App
+export default () => <Cards details={generateCardDetails} />
