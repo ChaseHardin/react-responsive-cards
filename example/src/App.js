@@ -8,6 +8,7 @@ const chance = new Chance()
 
 const App = () => {
   const [selected, setSelected] = React.useState('');
+  
   const cardInfo = () => {
     const title = chance.name();
 
