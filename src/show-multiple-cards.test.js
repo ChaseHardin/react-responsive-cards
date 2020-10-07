@@ -1,7 +1,8 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { Cards } from './index'
-import chance from './test-utils/chance-util'
+import { Cards } from '../src/index'
+import chance from '../src/test-utils/chance-util'
+import '@testing-library/jest-dom/extend-expect'
 
 test('should allow a user to view multiple cards', () => {
   const details = [
@@ -23,6 +24,10 @@ test('should allow a user to view multiple cards', () => {
     getByText(detail.title)
     getByText(detail.description)
     getByAltText(`Picture for ${detail.title}`)
+    expect(getByAltText(`Picture for ${details[0].title}`)).toHaveAttribute(
+      'style',
+      'width: 100%; height: 25rem; object-fit: cover;'
+    )
   })
 })
 
@@ -34,7 +39,10 @@ test('should allow a user to provide no images', () => {
     }
   ]
 
-  const { queryByAltText } = render(<Cards details={details} />)
+  const { getByAltText } = render(<Cards details={details} />)
 
-  expect(queryByAltText(`Picture for ${details[0].title}`)).toBeNull()
+  expect(getByAltText(`Picture for ${details[0].title}`)).toHaveAttribute(
+    'src',
+    'https://via.placeholder.com/500x500.png?text=react-responsive-cards'
+  )
 })

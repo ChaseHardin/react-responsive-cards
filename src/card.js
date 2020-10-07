@@ -4,15 +4,18 @@ import Button from 'react-bootstrap/Button'
 
 export default ({ detail }) => {
   const makeAltText = `Picture for ${detail.title}`
-  const renderImage = () =>
-    detail.image && (
-      <Card.Img
-        alt={makeAltText}
-        variant='top'
-        src={detail.image}
-        style={{ width: '100%', height: '25rem', objectFit: 'cover' }}
-      />
-    )
+  const renderImage = () => (
+    <Card.Img
+      data-testid='chase'
+      alt={makeAltText}
+      variant='top'
+      src={
+        detail.image ||
+        'https://via.placeholder.com/500x500.png?text=react-responsive-cards'
+      }
+      style={{ width: '100%', height: '25rem', objectFit: 'cover' }}
+    />
+  )
 
   const renderButton = () => {
     return (
