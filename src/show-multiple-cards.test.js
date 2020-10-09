@@ -18,7 +18,9 @@ test('should allow a user to view multiple cards', () => {
     }
   ]
 
-  const { getByText, getByAltText } = render(<Cards details={details} />)
+  const { getByText, getByAltText, container } = render(
+    <Cards details={details} />
+  )
 
   details.forEach((detail) => {
     getByText(detail.title)
@@ -31,6 +33,12 @@ test('should allow a user to view multiple cards', () => {
     expect(getByAltText(`Picture for ${details[0].title}`)).toHaveAttribute(
       'style',
       'width: 100%; height: 25rem; object-fit: cover;'
+    )
+    expect(
+      container.querySelector(`[data-card="${details[0].title}"]`)
+    ).toHaveAttribute(
+      'style',
+      'box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'
     )
   })
 })
