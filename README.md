@@ -2,7 +2,7 @@
 
 > A React library to quickly build a responsive grid of cards.
 
-[![NPM](https://img.shields.io/npm/v/react-responsive-cards.svg)](https://www.npmjs.com/package/react-responsive-cards) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](http://img.shields.io/npm/v/react-responsive-cards.svg?style=for-the-badge&logo=appveyor)](https://www.npmjs.com/package/react-responsive-cards) [![JavaScript Style Guide](http://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge&logo=appveyor)](https://standardjs.com)
 
 ## Demo
 View demo [here](https://chasehardin.github.io/react-responsive-cards/)
