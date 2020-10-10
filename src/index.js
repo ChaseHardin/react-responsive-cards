@@ -10,8 +10,10 @@ export const Cards = (props) => {
     props.details.map((detail, index) => (
       <Col
         key={index}
+        xs={12}
+        sm={6}
         lg={4}
-        md={6}
+        xl={3}
         style={{ marginBottom: '1rem', marginTop: '2rem' }}
       >
         <Card detail={detail} />
@@ -19,7 +21,7 @@ export const Cards = (props) => {
     ))
 
   return (
-    <Container>
+    <Container fluid>
       <Row>{renderCards()}</Row>
     </Container>
   )

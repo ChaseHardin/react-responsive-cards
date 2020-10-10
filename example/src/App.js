@@ -11,7 +11,7 @@ const generateCardDetails = chance.n(() => {
   return {
     title,
     description: chance.paragraph(),
-    image: `https://picsum.photos/500/500?images=${chance.natural({min:1, max:100})}`,
+    image: `https://picsum.photos/500/500?images=${chance.natural({ min: 1, max: 100 })}`,
     variant: chance.pickone([
       'primary',
       'secondary',

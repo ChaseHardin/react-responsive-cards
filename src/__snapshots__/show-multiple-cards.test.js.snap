@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders cards with correct bootstrap styles 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xl-3 col-lg-4 col-sm-6 col-12"
+      style={
+        Object {
+          "marginBottom": "1rem",
+          "marginTop": "2rem",
+        }
+      }
+    >
+      <div
+        className="card"
+        data-card="The Card Title"
+        style={
+          Object {
+            "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+          }
+        }
+      >
+        <img
+          alt="Picture for The Card Title"
+          className="card-img"
+          src="https://<image_here>.jpg"
+          style={
+            Object {
+              "height": "20rem",
+              "objectFit": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-title h5"
+          >
+            The Card Title
+          </div>
+          <p
+            className="card-text"
+            data-card-text="The Card Title"
+            style={
+              Object {
+                "height": "8rem",
+                "overflow": "scroll",
+              }
+            }
+          >
+            This is a short description
+          </p>
+          <button
+            className="btn btn-dark"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -10,7 +10,7 @@ export default ({ detail }) => {
         detail.image ||
         'https://via.placeholder.com/500x500.png?text=react-responsive-cards'
       }
-      style={{ width: '100%', height: '25rem', objectFit: 'cover' }}
+      style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
     />
   )
 
@@ -33,7 +33,7 @@ export default ({ detail }) => {
       {renderImage()}
       <Card.Body>
         <Card.Title>{detail.title}</Card.Title>
-        <Card.Text style={{ height: '4rem', overflow: 'scroll' }}>
+        <Card.Text data-card-text={detail.title} style={{ height: '8rem', overflow: 'scroll' }}>
           {detail.description}
         </Card.Text>
         {detail.variant && renderButton()}
