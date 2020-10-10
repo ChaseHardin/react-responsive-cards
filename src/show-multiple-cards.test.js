@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import { Cards } from '../src/index'
 import chance from '../src/test-utils/chance-util'
 import '@testing-library/jest-dom/extend-expect'
-import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer'
 
 test('should allow a user to view multiple cards', () => {
   const details = [
@@ -19,19 +19,16 @@ test('should allow a user to view multiple cards', () => {
     }
   ]
 
-  const { getByText, getByAltText, container } = render(
-    <Cards details={details} />
-  )
+  const { getByText, getByAltText } = render(<Cards details={details} />)
 
   details.forEach((detail) => {
     getByText(detail.title)
     getByText(detail.description)
     getByAltText(`Picture for ${detail.title}`)
-    expect(getByAltText(`Picture for ${detail.title}`))
-      .toHaveAttribute(
-        'src',
-        detail.image
-      )
+    expect(getByAltText(`Picture for ${detail.title}`)).toHaveAttribute(
+      'src',
+      detail.image
+    )
   })
 })
 
@@ -52,18 +49,18 @@ test('should allow a user to provide no images', () => {
 })
 
 it('renders cards with correct bootstrap styles', () => {
-  const details = [{
-    title: 'The Card Title',
-    description: 'This is a short description',
-    image: 'https://<image_here>.jpg',
-    variant: 'dark',
-    buttonText: 'Details',
-    callbackFn: () => {}
-  }]
+  const details = [
+    {
+      title: 'The Card Title',
+      description: 'This is a short description',
+      image: 'https://<image_here>.jpg',
+      variant: 'dark',
+      buttonText: 'Details',
+      callbackFn: () => {}
+    }
+  ]
 
-  const tree = renderer
-    .create(<Cards details={details}/>)
-    .toJSON();
+  const tree = renderer.create(<Cards details={details} />).toJSON()
 
-  expect(tree).toMatchSnapshot();
-});
+  expect(tree).toMatchSnapshot()
+})

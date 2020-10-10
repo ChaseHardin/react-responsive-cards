@@ -33,7 +33,10 @@ export default ({ detail }) => {
       {renderImage()}
       <Card.Body>
         <Card.Title>{detail.title}</Card.Title>
-        <Card.Text data-card-text={detail.title} style={{ height: '8rem', overflow: 'scroll' }}>
+        <Card.Text
+          data-card-text={detail.title}
+          style={{ height: '8rem', overflow: 'scroll' }}
+        >
           {detail.description}
         </Card.Text>
         {detail.variant && renderButton()}
