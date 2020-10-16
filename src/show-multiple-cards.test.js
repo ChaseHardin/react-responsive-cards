@@ -53,10 +53,7 @@ it('renders cards with correct bootstrap styles', () => {
     {
       title: 'The Card Title',
       description: 'This is a short description',
-      image: 'https://<image_here>.jpg',
-      variant: 'dark',
-      buttonText: 'Details',
-      callbackFn: () => {}
+      image: 'https://<image_here>.jpg'
     }
   ]
 
