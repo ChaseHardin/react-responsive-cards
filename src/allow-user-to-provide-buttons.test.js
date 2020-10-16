@@ -1,40 +1,24 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { Cards } from './index'
 import chance from './test-utils/chance-util'
 import '@testing-library/jest-dom/extend-expect'
 
-test('should allow a user to tie callback functions to button click events', () => {
-  const stubbedCallback = jest.fn()
+test('should allow a user to pass a custom footer component', () => {
+  const expectedFooterText = chance.word()
 
   const details = [
     {
       title: chance.string(),
       description: chance.paragraph(),
       image: chance.url(),
-      callbackFn: stubbedCallback,
-      buttonText: 'chase',
-      variant: chance.pickone([
-        'primary',
-        'secondary',
-        'success',
-        'danger',
-        'warning',
-        'info',
-        'light',
-        'dark'
-      ])
+      renderFooter: <div>{expectedFooterText}</div>
     }
   ]
 
-  const { getByText, container } = render(<Cards details={details} />)
+  const { getByText } = render(<Cards details={details} />)
 
-  expect(stubbedCallback.mock.calls.length).toBe(0)
-
-  fireEvent.click(getByText(details[0].buttonText))
-
-  expect(stubbedCallback.mock.calls.length).toBe(1)
-  expect(container.querySelector(`.btn-${details[0].variant}`)).toBeTruthy()
+  getByText(expectedFooterText)
 })
 
 test('should allow buttons to be optional', () => {

@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 
 export default ({ detail }) => {
   const renderImage = () => (
@@ -13,14 +12,6 @@ export default ({ detail }) => {
       style={{ width: '100%', height: '20rem', objectFit: 'cover' }}
     />
   )
-
-  const renderButton = () => {
-    return (
-      <Button variant={detail.variant} onClick={detail.callbackFn}>
-        {detail.buttonText}
-      </Button>
-    )
-  }
 
   return (
     <Card
@@ -39,7 +30,7 @@ export default ({ detail }) => {
         >
           {detail.description}
         </Card.Text>
-        {detail.variant && renderButton()}
+        {detail.renderFooter}
       </Card.Body>
     </Card>
   )

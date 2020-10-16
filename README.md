@@ -21,16 +21,12 @@ import { Cards } from 'react-responsive-cards'
 import 'react-responsive-cards/dist/index.css'
 
 const App = () => {
-  const handleCallback = () => // do something;
-
   const details = [
     {
       title: 'The Card Title',
       description: 'This is a short description',
       image: 'https://<image_here>.jpg',
-      variant: 'dark',
-      buttonText: 'Details',
-      callbackFn: handleCallback
+      renderFooter: <div>{'Custom JSX'}</div>
     }
   ]
 
@@ -41,13 +37,11 @@ export default App
 ```
 
 ## Props
-| PropName   | isRequired  | Type      | Description                                        |
-| :--------- | :---------- | :-------- | -------------------------------------------------- |
-|  details   |    yes      | Object[]  | An array of objects that build up the card details | 
-|  image     |    no       | sring     | Card image                                         |
-|  variant   |    no       | string    | Button color                                       | 
-| buttonText |    no       | string    | Button text                                        |
-| callbackFn |    no       | func      | Handle button click event                          |
+| PropName       | isRequired  | Type      | Description                                           |
+| :------------- | :---------- | :-------- | ----------------------------------------------------- |
+|  details       |    yes      | Object[]  | An array of objects that build up the card details    |  
+|  image         |    no       | sring     | Card image                                            |
+|  renderFooter  |    no       | Jsx       | Allows custom Jsx to generate footer                  | 
 
 ## License
 
