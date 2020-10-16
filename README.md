@@ -41,7 +41,7 @@ export default App
 | :------------- | :---------- | :-------- | ----------------------------------------------------- |
 |  details       |    yes      | Object[]  | An array of objects that build up the card details    |  
 |  image         |    no       | sring     | Card image                                            |
-|  renderFooter  |    no       | Jsx       | Allows custom Jsx to generate footer                  | 
+|  renderFooter  |    no       | JSX       | Allows custom JSX to generate footer                  | 
 
 ## License
 
