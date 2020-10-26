@@ -24,6 +24,6 @@ const generateCardDetails = chance.n(() => {
     image: `https://picsum.photos/500/500?images=${chance.natural({ min: 1, max: 100 })}`,
     renderFooter: renderFooter()
   }
-}, 100)
+}, 25)
 
 export default () => <Cards details={generateCardDetails} />
