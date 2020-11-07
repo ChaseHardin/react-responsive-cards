@@ -52,12 +52,6 @@ exports[`renders cards with correct material-ui styles 1`] = `
           </h2>
           <p
             className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
-            style={
-              Object {
-                "height": "8rem",
-                "overflow": "scroll",
-              }
-            }
           >
             This is a short description
           </p>

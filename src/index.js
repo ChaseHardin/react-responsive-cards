@@ -52,12 +52,7 @@ export const Cards = (props) => {
               <Typography gutterBottom variant='h5' component='h2'>
                 {detail.title}
               </Typography>
-              <Typography
-                variant='body2'
-                color='textSecondary'
-                component='p'
-                style={{ height: '8rem', overflow: 'scroll' }}
-              >
+              <Typography variant='body2' color='textSecondary' component='p'>
                 {detail.description}
               </Typography>
             </CardContent>
