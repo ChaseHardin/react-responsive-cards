@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-cards",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A React library to quickly build a responsive grid of cards.",
   "author": "ChaseHardin",
   "license": "MIT",
