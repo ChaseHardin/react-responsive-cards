@@ -1,60 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders cards with correct bootstrap styles 1`] = `
+exports[`renders cards with correct material-ui styles 1`] = `
 <div
-  className="row"
+  className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
 >
   <div
-    className="col-lg-4 col-md-6 col-sm-12"
-    style={
-      Object {
-        "marginBottom": "1rem",
-        "marginTop": "2rem",
-      }
-    }
+    className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
   >
     <div
-      className="card"
-      data-card="The Card Title"
+      className="MuiPaper-root MuiCard-root makeStyles-root-5 MuiPaper-elevation1 MuiPaper-rounded"
       style={
         Object {
-          "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+          "margin": "6px",
         }
       }
     >
-      <img
-        alt="Picture for The Card Title"
-        className="card-img"
-        src="https://<image_here>.jpg"
-        style={
-          Object {
-            "height": "20rem",
-            "objectFit": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <div
-        className="card-body"
+      <button
+        className="MuiButtonBase-root MuiCardActionArea-root"
+        disabled={false}
+        onBlur={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
       >
         <div
-          className="card-title h5"
-        >
-          The Card Title
-        </div>
-        <p
-          className="card-text"
-          data-card-text="The Card Title"
+          className="MuiCardMedia-root makeStyles-media-6"
+          data-card-media="The Card Title"
           style={
             Object {
-              "height": "8rem",
-              "overflow": "scroll",
+              "backgroundImage": "url(\\"https://<image_here>.jpg\\")",
             }
           }
+          title="The Card Title"
+        />
+        <div
+          className="MuiCardContent-root"
         >
-          This is a short description
-        </p>
-      </div>
+          <h2
+            className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            The Card Title
+          </h2>
+          <p
+            className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+            style={
+              Object {
+                "height": "8rem",
+                "overflow": "scroll",
+              }
+            }
+          >
+            This is a short description
+          </p>
+        </div>
+        <span
+          className="MuiCardActionArea-focusHighlight"
+        />
+      </button>
     </div>
   </div>
 </div>

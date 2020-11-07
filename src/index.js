@@ -1,22 +1,76 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Card from './card'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 400
+  },
+  media: {
+    height: 300
+  }
+})
 
 export const Cards = (props) => {
-  const renderCards = () =>
-    props.details.map((detail, index) => (
-      <Col
-        key={index}
-        sm={12}
-        md={6}
-        lg={4}
-        style={{ marginBottom: '1rem', marginTop: '2rem' }}
-      >
-        <Card detail={detail} />
-      </Col>
-    ))
+  const classes = useStyles()
 
-  return <Row>{renderCards()}</Row>
+  const renderCard = (detail, index) => {
+    return (
+      <Grid
+        container
+        direction='row'
+        item
+        sm={6}
+        md={4}
+        lg={3}
+        justify='center'
+        alignItems='center'
+        key={index}
+      >
+        <Card
+          className={classes.root}
+          key={detail.title}
+          style={{ margin: '6px' }}
+        >
+          <CardActionArea onClick={detail.handleOnClick}>
+            <CardMedia
+              data-card-media={detail.title}
+              className={classes.media}
+              image={
+                detail.image
+                  ? detail.image
+                  : 'https://via.placeholder.com/500x500.png?text=react-responsive-cards'
+              }
+              title={detail.title}
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='h2'>
+                {detail.title}
+              </Typography>
+              <Typography
+                variant='body2'
+                color='textSecondary'
+                component='p'
+                style={{ height: '8rem', overflow: 'scroll' }}
+              >
+                {detail.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          {detail.renderFooter}
+        </Card>
+      </Grid>
+    )
+  }
+
+  return (
+    <Grid container justify='center'>
+      {props.details.map((detail, index) => renderCard(detail, index))}
+    </Grid>
+  )
 }
