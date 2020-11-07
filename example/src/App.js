@@ -4,7 +4,9 @@ import { Cards } from 'react-responsive-cards'
 import 'react-responsive-cards/dist/index.css'
 import Chance from 'chance'
 import CardActions from '@material-ui/core/CardActions';
-import Button from '@material-ui/core/Button';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import IconButton from '@material-ui/core/IconButton';
+import ShareIcon from '@material-ui/icons/Share'
 
 const chance = new Chance()
 
@@ -13,8 +15,12 @@ const renderFooter = title => {
 
   return (
     <CardActions>
-      <Button size="small" color="primary" onClick={handleClick}>Share</Button>
-      <Button size="small" color="primary" onClick={handleClick}>Learn More</Button>
+      <IconButton aria-label="add to favorites">
+        <FavoriteIcon onClick={handleClick} />
+      </IconButton>
+      <IconButton aria-label="add to favorites">
+        <ShareIcon onClick={handleClick} />
+      </IconButton>
     </CardActions>
   )
 }
