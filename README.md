@@ -5,10 +5,15 @@
 [![NPM](http://img.shields.io/npm/v/react-responsive-cards.svg?style=for-the-badge&logo=appveyor)](https://www.npmjs.com/package/react-responsive-cards) [![JavaScript Style Guide](http://img.shields.io/badge/code_style-standard-brightgreen.svg?style=for-the-badge&logo=appveyor)](https://standardjs.com)
 
 ## Demo
-View demo [here](https://chasehardin.github.io/react-responsive-cards/)
+View demo [here](https://chasehardin.github.io/react-responsive-cards-demo/)
 
 ## Material UI
-React responsive cards is built using [material-ui](https://material-ui.com/).
+React responsive cards is built using [material-ui](https://material-ui.com/) as a peer dependency. The consuming app should also install the following:
+```
+npm install @material-ui/core --save
+npm install @material-ui/icons --save
+```
+Note - that `react-responsive-cards` will work with material ui components. For example, it will take a material ui component and build the card footer.
 
 ## Install
 
@@ -21,7 +26,6 @@ npm install --save react-responsive-cards
 import React from 'react'
 
 import { Cards } from 'react-responsive-cards'
-import 'react-responsive-cards/dist/index.css'
 
 const App = () => {
   const details = [
