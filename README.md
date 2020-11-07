@@ -7,8 +7,8 @@
 ## Demo
 View demo [here](https://chasehardin.github.io/react-responsive-cards/)
 
-## Peer Dependencies
-React responsive cards is built using [material-ui](https://material-ui.com/). It's installed as a peer dependency and requires that consuming app to have material ui installed as well.
+## Material UI
+React responsive cards is built using [material-ui](https://material-ui.com/).
 
 ## Install
 
