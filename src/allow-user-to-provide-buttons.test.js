@@ -20,17 +20,3 @@ test('should allow a user to pass a custom footer component', () => {
 
   getByText(expectedFooterText)
 })
-
-test('should allow buttons to be optional', () => {
-  const details = [
-    {
-      title: chance.string(),
-      description: chance.paragraph(),
-      image: chance.url()
-    }
-  ]
-
-  const { container } = render(<Cards details={details} />)
-
-  expect(container.querySelector('button')).toBeNull()
-})

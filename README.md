@@ -7,6 +7,9 @@
 ## Demo
 View demo [here](https://chasehardin.github.io/react-responsive-cards/)
 
+## Peer Dependencies
+React responsive cards is built using [material-ui](https://material-ui.com/). It's installed as a peer dependency and requires that consuming app to have material ui installed as well.
+
 ## Install
 
 ```bash
@@ -26,7 +29,8 @@ const App = () => {
       title: 'The Card Title',
       description: 'This is a short description',
       image: 'https://<image_here>.jpg',
-      renderFooter: <div>{'Custom JSX'}</div>
+      renderFooter: <div>{'Custom JSX'}</div>,
+      handleOnClick: () => alert('Custom Event')
     }
   ]
 
@@ -42,6 +46,7 @@ export default App
 |  details       |    yes      | Object[]  | An array of objects that build up the card details    |  
 |  image         |    no       | sring     | Card image                                            |
 |  renderFooter  |    no       | JSX       | Allows custom JSX to generate footer                  | 
+|  handleOnClick |    no       | Fn        | Allows a user to set event handler on entire card     | 
 
 ## License
 
