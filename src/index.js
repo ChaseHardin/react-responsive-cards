@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 400
+    maxWidth: 455
   },
   media: {
     height: 300
@@ -28,8 +28,8 @@ export const Cards = (props) => {
         sm={6}
         md={4}
         lg={3}
-        justify='center'
         alignItems='center'
+        justify='center'
         key={index}
       >
         <Card
@@ -52,7 +52,7 @@ export const Cards = (props) => {
               <Typography gutterBottom variant='h5' component='h2'>
                 {detail.title}
               </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
+              <Typography variant='body2' color='textSecondary' component='p' style={{ height: '50px' }}>
                 {detail.description}
               </Typography>
             </CardContent>
